@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Features - Anonymous Telegram Chat Bot{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">
+    <i class="bi bi-stars me-2"></i>
+    Key Features
+</h1>
+
+<div class="row g-4 mt-3">
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title d-flex align-items-center mb-3">
+                    <i class="bi bi-chat-dots me-2 text-info"></i>
+                    🔍 Anonymous Chatting
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">Connect randomly with <code>/connect</code> for private 1-on-1 chats</li>
+                    <li class="list-group-item bg-transparent">Messages are forwarded anonymously between paired users</li>
+                    <li class="list-group-item bg-transparent">Complete privacy - no usernames or IDs are shared</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title d-flex align-items-center mb-3">
+                    <i class="bi bi-eye me-2 text-info"></i>
+                    🎭 Identity Reveal with Consent
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">Use <code>/reveal</code> to request revealing identities</li>
+                    <li class="list-group-item bg-transparent">Partner must approve via inline buttons (✅ Yes/❌ No)</li>
+                    <li class="list-group-item bg-transparent">Displays names only if both users agree</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title d-flex align-items-center mb-3">
+                    <i class="bi bi-speedometer2 me-2 text-info"></i>
+                    ⏱️ Smart Connection Management
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">Automatic 45-second timeout if no partner is found</li>
+                    <li class="list-group-item bg-transparent">Inline "Try Again" button to re-attempt pairing</li>
+                    <li class="list-group-item bg-transparent">Use <code>/disconnect</code> to end chats anytime</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title d-flex align-items-center mb-3">
+                    <i class="bi bi-link-45deg me-2 text-info"></i>
+                    📨 Invite System
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">Generate group/channel invite links with <code>/invite</code></li>
+                    <li class="list-group-item bg-transparent">Requires bot admin rights in the target group/channel</li>
+                    <li class="list-group-item bg-transparent">Easy sharing of bot in community settings</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title d-flex align-items-center mb-3">
+                    <i class="bi bi-megaphone me-2 text-info"></i>
+                    📣 Admin Broadcasts
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">Admins can send messages to all users</li>
+                    <li class="list-group-item bg-transparent">Use <code>/broadcast &lt;message&gt;</code> to reach all users</li>
+                    <li class="list-group-item bg-transparent">Detailed delivery statistics after each broadcast</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title d-flex align-items-center mb-3">
+                    <i class="bi bi-shield-check me-2 text-info"></i>
+                    🛡️ Error Handling & Safety
+                </h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">Prevents self-connection and duplicate pairing</li>
+                    <li class="list-group-item bg-transparent">Graceful error messages for failed operations</li>
+                    <li class="list-group-item bg-transparent">Robust timeout management for better user experience</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <h2 class="mb-4">Ready to try these features?</h2>
+    <a href="https://t.me/your_bot_username" class="btn btn-primary btn-lg px-5" target="_blank">
+        <i class="bi bi-telegram me-2"></i>
+        Start Chatting Now
+    </a>
+</div>
+{% endblock %}

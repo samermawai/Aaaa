@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Help - Anonymous Telegram Chat Bot{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">
+    <i class="bi bi-question-circle me-2"></i>
+    Help & FAQ
+</h1>
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-dark text-light">
+                <h2 class="h5 mb-0">
+                    <i class="bi bi-list-check me-2"></i>
+                    Bot Commands
+                </h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/start</code></td>
+                                <td>Welcome message and bot instructions.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/connect</code></td>
+                                <td>Start searching for a chat partner.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/disconnect</code></td>
+                                <td>End the current chat conversation.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/reveal</code></td>
+                                <td>Request to reveal identities (triggers inline buttons).</td>
+                            </tr>
+                            <tr>
+                                <td><code>/invite</code></td>
+                                <td>Generate an invite link for your group.</td>
+                            </tr>
+                            <tr>
+                                <td><code>/broadcast &lt;message&gt;</code></td>
+                                <td>(Admin-only) Send a message to all users.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        <i class="bi bi-shield-lock me-2"></i>
+                        How is my privacy protected?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Your privacy is our top priority. Messages are forwarded anonymously, and no personal information (names, usernames, or IDs) is shared between users unless both explicitly agree through the <code>/reveal</code> command. All conversations are private between matched users only.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        <i class="bi bi-people me-2"></i>
+                        How does matching work?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>When you use <code>/connect</code>, you're added to a waiting pool. The bot then randomly pairs you with another waiting user. If no partner is available immediately, you'll wait until someone else joins. After 45 seconds of waiting, you'll receive a timeout message with a button to try connecting again.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        <i class="bi bi-chat-dots me-2"></i>
+                        What happens when I disconnect?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>When you use <code>/disconnect</code>, the conversation ends immediately for both users. Your partner will receive a notification that you've disconnected. All pending identity reveal requests are automatically canceled, and you're free to start a new chat with <code>/connect</code>.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        <i class="bi bi-eye me-2"></i>
+                        How does identity revealing work?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Either user can initiate an identity reveal request with <code>/reveal</code>. The partner then receives a message with Yes/No buttons. If they click Yes, both users receive each other's names and usernames (if available). If they click No, the request is declined, and the requester is notified. Identity reveals require mutual consent - both users must agree.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        What should I do if I encounter inappropriate behavior?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>If you encounter inappropriate behavior, use <code>/disconnect</code> immediately to end the conversation. You can report issues to the bot admin using regular Telegram features. Remember to always be respectful and follow Telegram's Terms of Service when using the bot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <h3>Still have questions?</h3>
+            <p class="mb-4">For more information or support, contact us directly on Telegram.</p>
+            <a href="https://t.me/your_bot_username" class="btn btn-info btn-lg" target="_blank">
+                <i class="bi bi-telegram me-2"></i>
+                Contact Support
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

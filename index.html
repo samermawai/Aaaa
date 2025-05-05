@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Anonymous Telegram Chat Bot - Connect Anonymously{% endblock %}
+
+{% block content %}
+<section class="hero-section text-center text-light p-5">
+    <h1 class="display-4 mb-3">
+        <i class="bi bi-incognito me-2"></i>
+        Anonymous Telegram Chat Bot
+    </h1>
+    <p class="lead mb-4">Connect with random users for private conversations with complete anonymity and control</p>
+    <div class="d-flex justify-content-center gap-3">
+        <a href="https://t.me/your_bot_username" class="btn btn-info btn-lg" target="_blank">
+            <i class="bi bi-telegram me-2"></i>
+            Start Chatting
+        </a>
+        <a href="/features" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-info-circle me-2"></i>
+            Learn More
+        </a>
+    </div>
+</section>
+
+<section class="row g-4 py-4">
+    <div class="col-md-4">
+        <div class="card feature-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-shield-lock feature-icon"></i>
+                <h3 class="card-title h4">🔒 Anonymous Chatting</h3>
+                <p class="card-text">Connect randomly with strangers for completely anonymous conversations. Your identity stays hidden until you choose to reveal it.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card feature-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-people feature-icon"></i>
+                <h3 class="card-title h4">🤝 Mutual Consent</h3>
+                <p class="card-text">Identity reveals require both users to agree. Your personal information is only shared when you want it to be.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card feature-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-lightning-charge feature-icon"></i>
+                <h3 class="card-title h4">⚡ Real-Time Connection</h3>
+                <p class="card-text">Get connected in seconds with our smart matching system. If no partner is found, you can easily try again with one click.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-dark p-4 rounded-3 my-4 text-light">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h2 class="mb-3">How It Works</h2>
+            <ol class="fs-5">
+                <li class="mb-2">Start the bot and type <code>/connect</code> to find a random partner</li>
+                <li class="mb-2">Chat anonymously with complete privacy</li>
+                <li class="mb-2">Use <code>/reveal</code> if you both want to know each other</li>
+                <li class="mb-2">Use <code>/disconnect</code> anytime to end the conversation</li>
+            </ol>
+        </div>
+        <div class="col-md-4 text-center">
+            <i class="bi bi-chat-text-fill" style="font-size: 8rem; color: var(--bs-info);"></i>
+        </div>
+    </div>
+</section>
+
+<section class="text-center my-5">
+    <h2 class="mb-4">Ready to Start Anonymous Conversations?</h2>
+    <a href="https://t.me/your_bot_username" class="btn btn-primary btn-lg px-5" target="_blank">
+        <i class="bi bi-telegram me-2"></i>
+        Start Chatting Now
+    </a>
+</section>
+{% endblock %}
