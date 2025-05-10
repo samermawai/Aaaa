@@ -1,9 +1,8 @@
 services:
-  - type: web
+  - type: worker
     name: anonymous-chat-bot
     env: python
-    buildCommand: ""
-    startCommand: bash start_web.sh
+    startCommand: python bot.py  # Or your bot's entry point
     plan: free
     envVars:
       - key: TELEGRAM_BOT_TOKEN
